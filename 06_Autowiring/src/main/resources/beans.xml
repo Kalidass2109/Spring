@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- When we gonna use byType, to avoid ambiguity among implementation classes, we giving sonyPrinter
+	as primary, so it will refer Sony -->
+	<bean id="sony" class="in.kali.SonyPrinter" primary="true"/>
+	
+	<!-- Here id name should match with variable name in target class, then only IOC identify which has 
+	to inject -->
+	<!-- Based on target class variable, IOC will identify dependent object, if any bean name matching with
+	the variable name that bean is dependent, that bean will injected into target -->
+	<bean id="printer" class="in.kali.HPPrinter" />
+	
+	<!--  <bean id="atm" class="in.kali.ATM" autowire="byName"/> -->
+	
+	<!-- Whenever we go with byType we no need to bother about what is the id of bean and what is the 
+	variable of target class, when giving byType it is gonna check what are the variable and data type 
+	available in the target  -->
+	<!-- <bean id="atm" class="in.kali.ATM" autowire="byType"/> -->
+	
+	<!-- by default ByType or byName will look setter method to for variable to perform DI,
+	To do via contructor  -->
+	<!-- <bean id="atm" class="in.kali.ATM" autowire="constructor"/> -->
+	
+	<!-- if autowire is no DI won't happen -->
+	<bean id="atm" class="in.kali.ATM" autowire="no"/> 
+
+</beans>
