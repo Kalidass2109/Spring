@@ -1,4 +1,3 @@
-====================
 Project development
 ===================
 
@@ -19,7 +18,6 @@ Project development
 		Utils --> email ops, pwd ops, date ops...
 
 
-=================================================================
 How one java class method can access another java class method ?	
 =================================================================
 
@@ -37,8 +35,6 @@ Note: With IS-A and HAS-A our classes will become tightly coupled.
 
 3) Code should be open for extension
 
-
-===============================
 What is dependency injection ?
 ===============================
 
@@ -60,7 +56,7 @@ Note: In normal java apps, programmers are responsible to perform DI.
 
 Note: If we use spring core then IOC container will take care of Dependency Injection.
 
-================
+
 What is IOC ?
 ================
 
@@ -88,7 +84,7 @@ What is IOC ?
 
 8) What is Spring Bean ?
 
-===============
+
 STS IDE Setup
 ===============
 
@@ -102,7 +98,7 @@ https://cdn.spring.io/spring-tools/release/STS4/4.21.1.RELEASE/dist/e4.30/spring
 
 => Go to STS folder and open IDE using .exe file		
 
-===================================
+
 First app development using spring
 ===================================
 
@@ -119,16 +115,12 @@ First app development using spring
 5) Create Test class to test our app with IOC container
 
 
-
-
-
-------------------------------------------------------------
 <property /> : Represents setter injection
 
 <constructor-arg /> : Represents constructor injection
-------------------------------------------------------------
 
-============
+
+
 Bean Scopes
 ============
 
@@ -152,7 +144,7 @@ Note: request and session scopes are used in spring web mvc module.
 
 Note: IOC will perform Eager loading for singleton beans and it will perform lazy loading for prototype beans.
 
-=================
+
 Bean life cycle
 =================
 
@@ -173,7 +165,7 @@ destory-method : When ioc is closed
 
 ----------------------------------------------------------------
 
-============
+
 Autowiring
 ============
 
@@ -203,7 +195,7 @@ We will use ref attribute to specify dependent bean
 		4) none (default)
 
 
-======================
+
 Collection Injection
 ======================
 
